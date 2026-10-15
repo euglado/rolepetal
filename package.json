@@ -1,0 +1,29 @@
+{
+  "name": "rolepetal",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Consent-based cosmetic role panels for Discord communities",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24.13.0 <25"
+  },
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "register": "node src/register.ts",
+    "start": "node src/main.ts",
+    "test": "node --test test/*.test.ts",
+    "lint": "biome check .",
+    "typecheck": "tsc --noEmit",
+    "supply": "node scripts/supply.mjs",
+    "check": "npm run lint && npm run typecheck && npm test && npm run supply"
+  },
+  "dependencies": {
+    "discord.js": "14.27.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.15",
+    "@types/node": "24.12.0",
+    "typescript": "7.0.2"
+  }
+}
